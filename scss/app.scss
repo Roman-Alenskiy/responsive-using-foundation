@@ -50,3 +50,215 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+/*
+* General
+*/
+
+body {
+    background-color: #f4f5f6;
+}
+
+a {
+    color: inherit;
+}
+
+/*
+* Header
+*/
+
+.header-first {
+    font-size: 0.9rem;
+    background-color: black;
+    color: white;
+    padding: 5px 0;
+
+    a {
+        color: inherit;
+    }
+}
+
+.f-header-second {
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+
+.header-second {
+    align-items: flex-end;
+    padding: 20px 10px 10px;
+    background-color: #f72210;
+    color: white;
+
+    a {
+        color: inherit;
+    }
+
+    .auth {
+        font-size: 1.1rem;
+        align-self: center;
+    }
+}
+
+.logo-full {
+    text-align: center;
+
+    svg {
+        fill: white;
+        height: 60px;
+    }
+}
+
+.logo-collapse {
+    padding-bottom: 5px;
+    text-align: start;
+    svg {
+        height: 20px;
+    }
+}
+
+.date {
+    margin-left: 10px;
+}
+
+.auth {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: right;
+
+    .subscribe, .subscribe:hover {
+        background-color: white;
+        color: #f72210;
+    }
+    
+    
+    a {
+        padding: 0.4rem 0.3rem;
+    }
+
+    a:hover {
+        color: inherit;
+    }
+}
+
+#canvas-toggler {
+    margin-left: auto;
+}
+
+#canvas-toggler:hover {
+    color:inherit;
+}
+
+.arrow-icon {
+    width: 8px;
+    fill: #f72210;
+    margin-left: 10px;
+}
+
+.header-third {
+    background-color: white;
+    color: black;
+    padding: 1rem 0;
+    border-bottom: 2px solid #f4f5f6;
+
+    li {
+        border-right: 1px solid $medium-gray;
+        padding: 3px 0;
+    }
+
+    a {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: inherit;
+        padding: 0 1.2rem;
+    }
+
+    a:hover {
+        color:#f72210;
+    }
+}
+
+#offCanvasRightOverlap {
+    background-color: white;
+    top: 70px;
+    box-shadow: rgba(0,0,0,.1) -2px 0px 2px;
+    color: black;
+
+    li {
+        position: relative;
+    }
+
+    a {
+        font-size: 1.3rem;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        color: inherit;
+    }
+
+    a:hover{
+        background-color: black;
+        color: white;
+    }
+
+    a:after {
+        content: "";
+        background-image: url('../img/icon-arrow-right-black.svg');
+        background-repeat: no-repeat;
+        display: inline-block;
+        height: 1rem;
+        width: 1rem;
+        position: absolute;
+        right: 5px;
+    }
+
+    a:hover:after {
+        background-image: url('../img/icon-arrow-right-red.svg')
+    }
+
+    input {
+        padding-left: 16px;
+    }
+
+    label {
+        content: "";
+        position: absolute;
+        right: 5px;
+        font-size: 0;
+        background-image: url('../img/icon-search-glass.svg');
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 1.3rem;
+        margin: 10px 5px;
+    }
+}
+
+/*
+* Main
+*/
+
+main {
+    background-color: white;
+}
+
+/*
+* Media queries
+*/
+
+@include breakpoint(medium down) { 
+    .header-second {
+        padding: 0 0 0 15px;
+    }
+
+    #auth-second-header {
+        font-size: 0.9rem;
+        display: none;
+    }
+
+    #logo {
+        padding-bottom: 5px;
+        text-align: start;
+        svg {
+            height: 20px;
+        }
+    }
+}
