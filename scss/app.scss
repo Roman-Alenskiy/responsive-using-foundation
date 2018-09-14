@@ -71,7 +71,6 @@ a {
     font-size: 0.9rem;
     background-color: black;
     color: white;
-    padding: 5px 0;
 
     a {
         color: inherit;
@@ -86,7 +85,7 @@ a {
 
 .header-second {
     align-items: flex-end;
-    padding: 20px 10px 10px;
+    padding: rem-calc(20 10 10);
     background-color: #f72210;
     color: white;
 
@@ -105,20 +104,20 @@ a {
 
     svg {
         fill: white;
-        height: 60px;
+        height: rem-calc(60);
     }
 }
 
 .logo-collapse {
-    padding-bottom: 5px;
+    padding-bottom: rem-calc(5);
     text-align: start;
     svg {
-        height: 20px;
+        height: rem-calc(20);
     }
 }
 
 .date {
-    margin-left: 10px;
+    margin-left: rem-calc(10);
 }
 
 .auth {
@@ -133,6 +132,7 @@ a {
     
     
     a {
+        display: inline-block;
         padding: 0.4rem 0.3rem;
     }
 
@@ -150,9 +150,9 @@ a {
 }
 
 .arrow-icon {
-    width: 8px;
+    width: rem-calc(8);
     fill: #f72210;
-    margin-left: 10px;
+    margin-left: rem-calc(10);
 }
 
 .header-third {
@@ -163,7 +163,7 @@ a {
 
     li {
         border-right: 1px solid $medium-gray;
-        padding: 3px 0;
+        padding: rem-calc(3) 0;
     }
 
     a {
@@ -180,7 +180,7 @@ a {
 
 #offCanvasRightOverlap {
     background-color: white;
-    top: 70px;
+    top: rem-calc(72.1);
     box-shadow: rgba(0,0,0,.1) -2px 0px 2px;
     color: black;
 
@@ -208,7 +208,7 @@ a {
         height: 1rem;
         width: 1rem;
         position: absolute;
-        right: 5px;
+        right: rem-calc(5);
     }
 
     a:hover:after {
@@ -216,19 +216,19 @@ a {
     }
 
     input {
-        padding-left: 16px;
+        padding-left: rem-calc(16);
     }
 
     label {
         content: "";
         position: absolute;
-        right: 5px;
+        right: rem-calc(5);
         font-size: 0;
         background-image: url('../img/icon-search-glass.svg');
         background-repeat: no-repeat;
         height: 100%;
         width: 1.3rem;
-        margin: 10px 5px;
+        margin: rem-calc(10 5);
     }
 }
 
@@ -246,7 +246,7 @@ main {
 
 @include breakpoint(medium down) { 
     .header-second {
-        padding: 0 0 0 15px;
+        padding: 0 0 0 rem-calc(15);
     }
 
     #auth-second-header {
@@ -255,10 +255,10 @@ main {
     }
 
     #logo {
-        padding-bottom: 5px;
+        padding-bottom: rem-calc(5);
         text-align: start;
         svg {
-            height: 20px;
+            height: rem-calc(20);
         }
     }
 }

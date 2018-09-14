@@ -19,7 +19,7 @@ $("document").ready(function($){
                     date.addClass("hide");
                     canvasToggler.removeClass("hide-for-large");
                     offCanvas.removeClass("hide-for-large");
-                    offCanvas.css("top", "38px");
+                    offCanvas.css("top", "2.405rem");
                 } else {
                     navSecond.removeClass("f-header-second");
                     navSecond.removeAttr("style")
@@ -28,19 +28,19 @@ $("document").ready(function($){
                     date.removeClass("hide");
                     canvasToggler.addClass("hide-for-large");
                     offCanvas.addClass("hide-for-large");
-                    offCanvas.css("top", "70px");
+                    offCanvas.css("top", "4.50625rem");
                 }
                 
             } else {
-                if ($(this).scrollTop() > 100) {
+                if ($(this).scrollTop() > 73) {
                     navSecond.addClass("f-header-second");
                     navFirst.addClass("hide")
-                    offCanvas.css("top", "38px");
+                    offCanvas.css("top", "2.405rem");
                     authSecondHeader.css("display", "flex")
                 } else {
                     navFirst.removeClass("hide");
                     navSecond.removeClass("f-header-second")
-                    offCanvas.css("top", "70px");
+                    offCanvas.css("top", "4.50625rem");
                     authSecondHeader.removeAttr("style")
                 }
             };
