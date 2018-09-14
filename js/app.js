@@ -28,7 +28,7 @@ $("document").ready(function($){
                     date.removeClass("hide");
                     canvasToggler.addClass("hide-for-large");
                     offCanvas.addClass("hide-for-large");
-                    offCanvas.css("top", "4.50625rem");
+                    offCanvas.css("top", "4.60625rem");
                 }
                 
             } else {
@@ -40,7 +40,7 @@ $("document").ready(function($){
                 } else {
                     navFirst.removeClass("hide");
                     navSecond.removeClass("f-header-second")
-                    offCanvas.css("top", "4.50625rem");
+                    offCanvas.css("top", "4.60625rem");
                     authSecondHeader.removeAttr("style")
                 }
             };
