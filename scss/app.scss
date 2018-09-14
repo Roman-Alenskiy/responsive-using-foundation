@@ -64,6 +64,52 @@ a {
 }
 
 /*
+* Typography
+*/
+
+h1 {
+    text-transform: uppercase;
+    color: $dark-gray;
+}
+
+h2 {
+    a:hover {
+        color: inherit;
+        text-decoration: underline #f72210;
+    }
+}
+
+.more-stories {
+    h2 {
+        font-size: rem-calc(17)
+    }
+}
+
+h3 {
+    padding: 10px 0;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+
+    a:hover {
+        color: #f72210;
+    }
+}
+
+h4 {
+    text-transform: uppercase;
+    color: #555;
+
+    a:hover {
+        color: #f72210;
+    }
+}
+
+p {
+    font-family: Arial,Helvetica,sans-serif;
+    color: #333;
+}
+
+/*
 * Header
 */
 
@@ -81,6 +127,7 @@ a {
     position: fixed;
     left: 0;
     right: 0;
+    z-index: 99;
 }
 
 .header-second {
@@ -238,6 +285,74 @@ a {
 
 main {
     background-color: white;
+    padding: rem-calc(20 30)
+}
+
+.card-img {
+    position: relative;
+    margin-bottom: rem-calc(10);
+    
+    .category {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: rem-calc(5 15);
+        color: #f72210;
+        background-color: rgba(255, 255, 255, 0.9);
+        font-weight: bold;
+        text-transform: uppercase;
+
+        a {
+            color: inherit;
+        } 
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.preview {
+    @extend .grid-x;
+    padding: rem-calc(15 0);
+    border-bottom: 1px solid #d9d9d9;
+
+    &:last-of-type {
+        border-bottom: none;
+    }
+}
+
+.preview-img {
+    @extend .cell;
+    margin-right: rem-calc(20);
+}
+
+.preview-section {
+    @extend .cell;
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.opinions, .latest-news {
+    h3 {
+        padding: 0;
+        border: none;
+    }
+
+    .preview:first-of-type {
+        padding-top: 0;
+    }
+}
+
+.opinions {
+    .preview-img {
+        img {
+            border-radius: 50%;
+        }
+    }
 }
 
 /*
@@ -260,5 +375,9 @@ main {
         svg {
             height: rem-calc(20);
         }
+    }
+
+    main {
+        padding: rem-calc(20 15)
     }
 }
